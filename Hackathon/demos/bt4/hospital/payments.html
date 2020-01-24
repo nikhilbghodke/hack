@@ -12,7 +12,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Elite Hospital Admin Template - Hospital admin dashboard web app kit</title>
+    <title>int elegant</title>
     <!-- Custom CSS -->
     <link href="dist/css/style.min.css" rel="stylesheet">
     <link href="../assets/node_modules/datatables/jquery.dataTables.min.html" rel="stylesheet" type="text/css" />
@@ -610,15 +610,17 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h4 class="text-themecolor">Payments</h4>
+                        <h4 class="text-themecolor">Patients</h4>
                     </div>
                     <div class="col-md-7 align-self-center text-right">
                         <div class="d-flex justify-content-end align-items-center">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                                <li class="breadcrumb-item active">Payments</li>
+                                <li class="breadcrumb-item active">Patients</li>
                             </ol>
-                            <button type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
+                            <form action="add-patient.html">
+                                <button type="submit" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -633,19 +635,18 @@
                     <div class="col-sm-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title m-b-0">Hospital Payments Details</h5>
+                                <h5 class="card-title m-b-0">Hospital Patients Details</h5>
                                 <hr>
                                 <div class="table-responsive">
                                     <table id="myTable" class="table table-striped">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Patient</th>
-                                                <th>Doctor</th>
-                                                <th>Date</th>
-                                                <th>Charges</th>
-                                                <th>Discount</th>
-                                                <th>Total</th>
+                                                <th>PatientID</th>
+                                                <th>Name</th>
+                                                <th>Date of Birth</th>
+                                                <th>Gender</th>
+                                                <th>Number</th>
                                             </tr>
                                         </thead>
                                         <tbody>
