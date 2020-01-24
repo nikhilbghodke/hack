@@ -636,6 +636,32 @@
                                 <label for="input-file-now">Your so fresh input file</label>
                                 <input type="file" id="file" name="file" class="dropify" />
                             </div>
+                        <div class="form-group" style="padding: 20px;">
+                            <label>Patient ID</label>
+                            <div>
+                                <select name = "pid" class="form-control">
+                                    <?php
+                                    include("php/db_connect.php");
+                                     $sql = "SELECT * FROM patient";
+                                    $result = mysqli_query($conn, $sql);
+
+                                    if (mysqli_num_rows($result) > 0) {
+                                    // output data of each row
+                                    while($row = mysqli_fetch_assoc($result)) {
+                                            echo "<option value='".$row['aadhaar']."'>".$row['aadhaar']."</option>";
+                                       // echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["gender"]. "<br>";
+                                    }
+                            }
+                        else {
+                            echo "0 results";
+                        }
+
+                        mysqli_close($conn);
+                                    ?>
+                                   
+                                </select>
+                            </div>
+                        </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>

@@ -9,13 +9,11 @@ if (isset($_FILES['file'])){
  $ext = $path['extension'];
  $temp_name = $_FILES['file']['tmp_name'];
  $path_filename_ext = $target_dir.$filename.".".$ext;
+ $pid=$_POST["pid"];
  
 // Check if file already exists
-if (file_exists($path_filename_ext)) {
- echo "Sorry, file already exists.";
- }else{
  move_uploaded_file($temp_name,$path_filename_ext);
-     $sql = "INSERT INTO ehr (file, type) VALUES ('$file', '1')";
+     $sql = "INSERT INTO ehr (file, type, patientId) VALUES ('$file', '1', '$pid')";
 
 	if (mysqli_query($conn, $sql)) {
     	echo "New record created successfully";
@@ -28,6 +26,6 @@ if (file_exists($path_filename_ext)) {
  echo "Congratulations! File Uploaded Successfully.";
  header("Location: ../patients.html");
 	die();
- }
+ 
 }
 ?>
