@@ -632,12 +632,19 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Basic Information</h5>
-                                <form class="form-material form-horizontal">
+                                <form class="form-material form-horizontal" method="POST" action="add-patient.php">
                                     <div class="form-group">
-                                        <label class="col-md-12" for="example-text">Name</span>
+                                        <label class="col-md-12" for="pid">Aadhar Number</label></span>
                                         </label>
                                         <div class="col-md-12">
-                                            <input type="text" id="example-text" name="example-text" class="form-control" placeholder="enter your name">
+                                            <input type="text" id="pid" name="pid" class="form-control" placeholder="enter your Aadhar Number">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12" for="name">Name</span>
+                                        </label>
+                                        <div class="col-md-12">
+                                            <input type="text" id="name" name="name" class="form-control" placeholder="enter your name">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -650,7 +657,7 @@
                                     <div class="form-group">
                                         <label class="col-sm-12">Gender</label>
                                         <div class="col-sm-12">
-                                            <select class="form-control">
+                                            <select name = "gender" class="form-control">
                                                 <option>Select Gender</option>
                                                 <option>Male</option>
                                                 <option>Female</option>
@@ -658,19 +665,13 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-12">Profile Image</label>
-                                        <div class="col-sm-12">
-                                            <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                                                <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div> <span class="input-group-addon btn btn-default btn-file"> <span class="fileinput-new">Select file</span> <span class="fileinput-exists">Change</span>
-                                                <input type="file" name="..."> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a> </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Description</label>
+                                        <label class="col-md-12" for="number">Number</span>
+                                        </label>
                                         <div class="col-md-12">
-                                            <textarea class="form-control" rows="3"></textarea>
+                                            <input type="text" id="number" name="number"  class="form-control" placeholder="enter your mobile number">
                                         </div>
                                     </div>
+                                    
                                     <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Submit</button>
                                     <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
                                 </form>
@@ -678,85 +679,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Patients's Account Information</h5>
-                                <form class="form-material form-horizontal">
-                                    <div class="form-group">
-                                        <label class="col-md-12" for="example-email">Email</span>
-                                        </label>
-                                        <div class="col-md-12">
-                                            <input type="email" id="example-email" name="example-email" class="form-control" placeholder="enter your email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12" for="example-phone">Phone</span>
-                                        </label>
-                                        <div class="col-md-12">
-                                            <input type="text" id="example-phone" name="example-phone" class="form-control" placeholder="enter your phone" data-mask="(999) 999-9999">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12" for="pwd">Password</span>
-                                        </label>
-                                        <div class="col-md-12">
-                                            <input type="password" id="pwd" name="pwd" class="form-control" placeholder="enter your password">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12" for="cpwd">Confirm Password</span>
-                                        </label>
-                                        <div class="col-md-12">
-                                            <input type="password" id="cpwd" name="cpwd" class="form-control" placeholder="confirm your password">
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Submit</button>
-                                    <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Patient's Social Information</h5>
-                                <form class="form-material form-horizontal">
-                                    <div class="form-group">
-                                        <label class="col-md-12" for="furl">Facebook URL</span>
-                                        </label>
-                                        <div class="col-md-12">
-                                            <input type="text" id="furl" name="furl" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12" for="turl">Twitter URL</span>
-                                        </label>
-                                        <div class="col-md-12">
-                                            <input type="text" id="turl" name="turl" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12" for="gurl">Google Plus URL</span>
-                                        </label>
-                                        <div class="col-md-12">
-                                            <input type="text" id="gurl" name="gurl" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12" for="inurl">LinkedIN URL</span>
-                                        </label>
-                                        <div class="col-md-12">
-                                            <input type="text" id="inurl" name="inurl" class="form-control">
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Submit</button>
-                                    <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- ============================================================== -->
@@ -830,9 +752,7 @@
     <!-- ============================================================== -->
     <!-- footer -->
     <!-- ============================================================== -->
-    <footer class="footer">
-        © 2018 Eliteadmin by themedesigner.in
-    </footer>
+   
     <!-- ============================================================== -->
     <!-- End footer -->
     <!-- ============================================================== -->
