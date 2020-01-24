@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.rawgit.com	TRUE	/	FALSE	1999999999	__cfduid	d91de742cf0cf1a2640c983e7d10b37bb1579839919
+cdn.rawgit.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+.datatables.net	TRUE	/	FALSE	1999999999	__cfduid	d242e65350567c62bce1e201b118e82201579861567
+cdn.datatables.net	TRUE	/	FALSE	1999999999	SameSite	Lax
+
