@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<!-- Mirrored from eliteadmin.themedesigner.in/demos/bt4/hospital/patients.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jan 2020 10:26:00 GMT -->
+<!-- Mirrored from eliteadmin.themedesigner.in/demos/bt4/hospital/payments.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jan 2020 10:26:07 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,11 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Elite Hospital Admin Template - Hospital admin dashboard web app kit</title>
+    <title>int elegant</title>
     <!-- Custom CSS -->
     <link href="dist/css/style.min.css" rel="stylesheet">
-    <!-- Popup CSS -->
-    <link href="../assets/node_modules/Magnific-Popup-master/dist/magnific-popup.css" rel="stylesheet">
-    <link href="dist/css/pages/user-card.css" rel="stylesheet">
+    <link href="../assets/node_modules/datatables/jquery.dataTables.min.html" rel="stylesheet" type="text/css" />
+    <link href="../../../../cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -619,7 +618,9 @@
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
                                 <li class="breadcrumb-item active">Patients</li>
                             </ol>
-                            <button type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
+                            <form action="add-patient.html">
+                                <button type="submit" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -629,242 +630,42 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                <div class="col-md-12">
-                    <div class="row el-element-overlay">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="el-card-item">
-                                    <div class="el-card-avatar el-overlay-1"> <img src="../assets/images/users/3.jpg" alt="user" />
-                                        <div class="el-overlay">
-                                            <ul class="el-info">
-                                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="../assets/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                                                <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="el-card-content">
-                                        <h3 class="box-title">Genelia Deshmukh</h3> <small>Managing Director</small>
-                                        <br/>
-                                        <small>Age: 24 years</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="el-card-item">
-                                    <div class="el-card-avatar el-overlay-1"> <img src="../assets/images/users/1.jpg" alt="user" />
-                                        <div class="el-overlay">
-                                            <ul class="el-info">
-                                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="../assets/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                                                <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="el-card-content">
-                                        <h3 class="box-title">Genelia Deshmukh</h3> <small>Managing Director</small>
-                                        <br/>
-                                        <small>Age: 24 years</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="el-card-item">
-                                    <div class="el-card-avatar el-overlay-1"> <img src="../assets/images/users/5.jpg" alt="user" />
-                                        <div class="el-overlay">
-                                            <ul class="el-info">
-                                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="../assets/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                                                <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="el-card-content">
-                                        <h3 class="box-title">Genelia Deshmukh</h3> <small>Managing Director</small>
-                                        <br/>
-                                        <small>Age: 24 years</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="el-card-item">
-                                    <div class="el-card-avatar el-overlay-1"> <img src="../assets/images/users/8.jpg" alt="user" />
-                                        <div class="el-overlay">
-                                            <ul class="el-info">
-                                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="../assets/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                                                <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="el-card-content">
-                                        <h3 class="box-title">Genelia Deshmukh</h3> <small>Managing Director</small>
-                                        <br/>
-                                        <small>Age: 24 years</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row el-element-overlay">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="el-card-item">
-                                    <div class="el-card-avatar el-overlay-1"> <img src="../assets/images/users/3.jpg" alt="user" />
-                                        <div class="el-overlay">
-                                            <ul class="el-info">
-                                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="../assets/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                                                <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="el-card-content">
-                                        <h3 class="box-title">Genelia Deshmukh</h3> <small>Managing Director</small>
-                                        <br/>
-                                        <small>Age: 24 years</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="el-card-item">
-                                    <div class="el-card-avatar el-overlay-1"> <img src="../assets/images/users/1.jpg" alt="user" />
-                                        <div class="el-overlay">
-                                            <ul class="el-info">
-                                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="../assets/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                                                <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="el-card-content">
-                                        <h3 class="box-title">Genelia Deshmukh</h3> <small>Managing Director</small>
-                                        <br/>
-                                        <small>Age: 24 years</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="el-card-item">
-                                    <div class="el-card-avatar el-overlay-1"> <img src="../assets/images/users/5.jpg" alt="user" />
-                                        <div class="el-overlay">
-                                            <ul class="el-info">
-                                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="../assets/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                                                <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="el-card-content">
-                                        <h3 class="box-title">Genelia Deshmukh</h3> <small>Managing Director</small>
-                                        <br/>
-                                        <small>Age: 24 years</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="el-card-item">
-                                    <div class="el-card-avatar el-overlay-1"> <img src="../assets/images/users/8.jpg" alt="user" />
-                                        <div class="el-overlay">
-                                            <ul class="el-info">
-                                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="../assets/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                                                <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="el-card-content">
-                                        <h3 class="box-title">Genelia Deshmukh</h3> <small>Managing Director</small>
-                                        <br/>
-                                        <small>Age: 24 years</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row el-element-overlay">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="el-card-item">
-                                    <div class="el-card-avatar el-overlay-1"> <img src="../assets/images/users/3.jpg" alt="user" />
-                                        <div class="el-overlay">
-                                            <ul class="el-info">
-                                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="../assets/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                                                <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="el-card-content">
-                                        <h3 class="box-title">Genelia Deshmukh</h3> <small>Managing Director</small>
-                                        <br/>
-                                        <small>Age: 24 years</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="el-card-item">
-                                    <div class="el-card-avatar el-overlay-1"> <img src="../assets/images/users/1.jpg" alt="user" />
-                                        <div class="el-overlay">
-                                            <ul class="el-info">
-                                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="../assets/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                                                <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="el-card-content">
-                                        <h3 class="box-title">Genelia Deshmukh</h3> <small>Managing Director</small>
-                                        <br/>
-                                        <small>Age: 24 years</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="el-card-item">
-                                    <div class="el-card-avatar el-overlay-1"> <img src="../assets/images/users/5.jpg" alt="user" />
-                                        <div class="el-overlay">
-                                            <ul class="el-info">
-                                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="../assets/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                                                <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="el-card-content">
-                                        <h3 class="box-title">Genelia Deshmukh</h3> <small>Managing Director</small>
-                                        <br/>
-                                        <small>Age: 24 years</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="el-card-item">
-                                    <div class="el-card-avatar el-overlay-1"> <img src="../assets/images/users/8.jpg" alt="user" />
-                                        <div class="el-overlay">
-                                            <ul class="el-info">
-                                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="../assets/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
-                                                <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="el-card-content">
-                                        <h3 class="box-title">Genelia Deshmukh</h3> <small>Managing Director</small>
-                                        <br/>
-                                        <small>Age: 24 years</small>
-                                    </div>
+                <!-- /row -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title m-b-0">Hospital Patients Details</h5>
+                                <hr>
+                                <div class="table-responsive">
+                                    <table id="myTable" class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>PatientID</th>
+                                                <th>Name</th>
+                                                <th>Date of Birth</th>
+                                                <th>Gender</th>
+                                                <th>Number</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>8888 8888 8888</td>
+                                                <td>Steve Gection</td>
+                                                <td>20/20/1996</td>
+                                                <td>Male</td>
+                                                <td>6666666666</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- /.row -->
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -964,11 +765,14 @@
     <script src="../assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
     <!--Custom JavaScript -->
     <script src="dist/js/custom.min.js"></script>
-    <!-- Magnific popup JavaScript -->
-    <script src="../assets/node_modules/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
-    <script src="../assets/node_modules/Magnific-Popup-master/dist/jquery.magnific-popup-init.js"></script>
+    <script src="../assets/node_modules/datatables/jquery.dataTables.min-2.html"></script>
+    <script>
+    $(document).ready(function() {
+        $('#myTable').DataTable();
+    });
+    </script>
 </body>
 
 
-<!-- Mirrored from eliteadmin.themedesigner.in/demos/bt4/hospital/patients.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jan 2020 10:26:00 GMT -->
+<!-- Mirrored from eliteadmin.themedesigner.in/demos/bt4/hospital/payments.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jan 2020 10:26:09 GMT -->
 </html>
