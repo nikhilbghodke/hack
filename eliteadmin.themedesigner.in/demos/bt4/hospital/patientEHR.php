@@ -635,6 +635,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <center>
+
                                 <form method="POST" action="php/getOTP.php" >
                                     <button type="submit" class="btn btn-info d-none d-lg-block m-l-15 btn-lg"><i class="fa fa-plus-circle"></i>
                                         Request Files
