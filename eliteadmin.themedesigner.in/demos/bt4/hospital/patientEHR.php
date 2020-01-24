@@ -610,15 +610,15 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h4 class="text-themecolor">Patients</h4>
+                        <h4 class="text-themecolor">Patient EHRs</h4>
                     </div>
                     <div class="col-md-7 align-self-center text-right">
                         <div class="d-flex justify-content-end align-items-center">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                                <li class="breadcrumb-item active">Patients</li>
+                                <li class="breadcrumb-item active">Patient EHRs</li>
                             </ol>
-                            <form action="add-patient.html">
+                            <form action="form-upload.html">
                                 <button type="submit" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
                             </form>
                         </div>
@@ -636,41 +636,41 @@
                     <div class="col-sm-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title m-b-0">Hospital Patients Details</h5>
+                                <h5 class="card-title m-b-0">Patient EHR</h5>
                                 <hr>
                                 <div class="table-responsive">
-                                    <table id="myTable" class="table table-striped">
+                                    <table id="myTable" class="table color-table  danger-table">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
                                                 <th>PatientID</th>
-                                                <th>Name</th>
-                                                <th>Date of Birth</th>
-                                                <th>Gender</th>
-                                                <th>Number</th>
-                                                <th>View EHR</th>
+                                                <th>Symptoms</th>
+                                                <th>Prescription</th>
+                                                <th>Comment</th>
+                                                <th>Precautions</th>
+                                                <th>File</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                <?php
-                        include("php/db_connect.php");
-                        $sql = "SELECT * FROM patient";
-                        $result = mysqli_query($conn, $sql);
+                                        <!-- <?php
+                                            // include("php/db_connect.php");
+                                            // $sql = "SELECT * FROM patient";
+                                            // $result = mysqli_query($conn, $sql);
 
-                        if (mysqli_num_rows($result) > 0) {
-                        // output data of each row
-                        while($row = mysqli_fetch_assoc($result)) {
-                            echo "<tr><td>".$row["id"]."</td><td>".$row["aadhaar"]."</td><td>".$row["name"]."</td><td>".$row["DOB"]."</td><td>".$row["gender"]."</td><td>".$row["phnumber"]."</td><td><form method='GET' action='patientEHR.php?id=".$row["id"]."'><button type='submit'>View EHR</button></form></td></tr>";
-                                       // echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["gender"]. "<br>";
-                        }
-                        }
-                        else {
-                            echo "0 results";
-                        }
+                                            // if (mysqli_num_rows($result) > 0) {
+                                            // // output data of each row
+                                            // while($row = mysqli_fetch_assoc($result)) {
+                                            //     echo "<tr><td>".$row["id"]."</td><td>".$row["aadhaar"]."</td><td>".$row["name"]."</td><td>".$row["DOB"]."</td><td>".$row["gender"]."</td><td>".$row["phnumber"]."</td></tr>";
+                                            //             // echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["gender"]. "<br>";
+                                            // }
+                                            // }
+                                            // else {
+                                            //     echo "0 results";
+                                            // }
 
-                        mysqli_close($conn);
+                                            // mysqli_close($conn);
 
-                ?>
+                                        ?> -->
                                         </tbody>
                                     </table>
                                 </div>
