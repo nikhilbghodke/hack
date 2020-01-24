@@ -661,7 +661,8 @@
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
 
-                            echo "<tr><td>".$row["id"]."</td><td>".$row["aadhaar"]."</td><td>".$row["name"]."</td><td>".$row["DOB"]."</td><td>".$row["gender"]."</td><td>".$row["phnumber"]."</td><td><form method='GET' action='patientEHR.php?id=".$row["id"]."'><button type='submit' class='btn btn-info d-none d-lg-block m-l-15'>View EHR</button></form></td></tr>";
+                            echo "<tr><td>".$row["id"]."</td><td>".$row["aadhaar"]."</td><td>".$row["name"]."</td><td>".$row["DOB"]."</td><td>".$row["gender"]."</td><td>".$row["phnumber"]."</td><td><button type='button' class='btn btn-primary' onClick='doThing({$row["aadhaar"]});'>View EHR </button></td>;
+                            </tr>";
 
 
                                        // echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["gender"]. "<br>";
@@ -783,6 +784,12 @@
     $(document).ready(function() {
         $('#myTable').DataTable();
     });
+    </script>
+    <script>
+    function doThing(aadhar)
+    {
+        document.location.href = "patientEHR.php?id=" + aadhar;
+    }
     </script>
 </body>
 
