@@ -618,9 +618,35 @@
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
                                 <li class="breadcrumb-item active">Patient EHRs</li>
                             </ol>
-                            <form action="form-upload.html">
-                                <button type="submit" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
-                            </form>
+                            <button type="button" class="btn btn-info d-none d-lg-block m-l-15" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-circle"></i>
+                                Request Files
+                            </button>
+            
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <center><form>
+                                        <label>Enter OTP</label>
+                                        <div class="col-sm-5">
+                                            <input type="text" class="form-control" id="otp" name="otp"  placeholder="OTP">
+                                        </div>
+                                    </form></center>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Enter OTP</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>

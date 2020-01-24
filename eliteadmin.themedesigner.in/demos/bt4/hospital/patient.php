@@ -660,7 +660,7 @@
                         if (mysqli_num_rows($result) > 0) {
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
-                            echo "<tr><td>".$row["id"]."</td><td>".$row["aadhaar"]."</td><td>".$row["name"]."</td><td>".$row["DOB"]."</td><td>".$row["gender"]."</td><td>".$row["phnumber"]."</td><td><form method='GET' action='patientEHR.php?id=".$row["id"]."'><button type='submit'>View EHR</button></form></td></tr>";
+                            echo "<tr><td>".$row["id"]."</td><td>".$row["aadhaar"]."</td><td>".$row["name"]."</td><td>".$row["DOB"]."</td><td>".$row["gender"]."</td><td>".$row["phnumber"]."</td><td><form method='GET' action='patientEHR.php?id=".$row["id"]."'><button type='submit' class='btn btn-info d-none d-lg-block m-l-15'>View EHR</button></form></td></tr>";
                                        // echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["gender"]. "<br>";
                         }
                         }
