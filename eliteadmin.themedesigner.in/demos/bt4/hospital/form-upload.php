@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<!-- Mirrored from eliteadmin.themedesigner.in/demos/bt4/hospital/payments.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jan 2020 10:26:07 GMT -->
+<!-- Mirrored from eliteadmin.themedesigner.in/demos/bt4/hospital/form-upload.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jan 2020 10:30:11 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,11 +12,10 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>int elegant</title>
+    <title>Elite Hospital Admin Template - Hospital admin dashboard web app kit</title>
+    <link rel="stylesheet" href="../assets/node_modules/dropify/dist/css/dropify.min.css">
     <!-- Custom CSS -->
     <link href="dist/css/style.min.css" rel="stylesheet">
-    <link href="../assets/node_modules/datatables/jquery.dataTables.min.html" rel="stylesheet" type="text/css" />
-    <link href="../../../../cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -52,12 +51,10 @@
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
-                            <!-- Light Logo icon -->
-                            <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                            
                         </b>
                         <!--End Logo icon -->
-                        <span class="hidden-xs"><span class="font-bold">elite</span>hospital</span>
+                        <span class="hidden-xs"><span class="font-bold">Int </span>elegant</span>
                     </a>
                 </div>
                 <!-- ============================================================== -->
@@ -610,17 +607,15 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h4 class="text-themecolor">Patients</h4>
+                        <h4 class="text-themecolor">Uploads</h4>
                     </div>
                     <div class="col-md-7 align-self-center text-right">
                         <div class="d-flex justify-content-end align-items-center">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                                <li class="breadcrumb-item active">Patients</li>
+                                <li class="breadcrumb-item active">Uploads</li>
                             </ol>
-                            <form action="add-patient.html">
-                                <button type="submit" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
-                            </form>
+                            <button type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
                         </div>
                     </div>
                 </div>
@@ -630,58 +625,98 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                <!-- /row -->
-                
-                <div class="row">
-                    <div class="col-sm-12">
+		                
+		<div class="row">
+                <div class="col">
+                <form class="mt-4" style="text-align:center;" method="POST" action="php/file-upload.php" enctype="multipart/form-data">
+                    <div class="col-lg-12 col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title m-b-0">Hospital Patients Details</h5>
-                                <hr>
-                                <div class="table-responsive">
-                                    <table id="myTable" class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>No</th>
-                                                <th>PatientID</th>
-                                                <th>Name</th>
-                                                <th>Date of Birth</th>
-                                                <th>Gender</th>
-                                                <th>Number</th>
-                                                <th>View EHR</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                <?php
-                        include("php/db_connect.php");
-                        $sql = "SELECT * FROM patient";
-                        $result = mysqli_query($conn, $sql);
+                                <h4 class="card-title">Upload Patient Record</h4>
+                                <label for="input-file-now">Your so fresh input file</label>
+                                <input type="file" id="file" name="file" class="dropify" />
+                            </div>
+                        <div class="form-group" style="padding: 20px;">
+                            <label>Patient ID</label>
+                            <div>
+                                <select name = "pid" class="form-control">
+                                    <?php
+                                    include("php/db_connect.php");
+                                     $sql = "SELECT * FROM patient";
+                                    $result = mysqli_query($conn, $sql);
 
-                        if (mysqli_num_rows($result) > 0) {
-                        // output data of each row
-                        while($row = mysqli_fetch_assoc($result)) {
-
-                            echo "<tr><td>".$row["id"]."</td><td>".$row["aadhaar"]."</td><td>".$row["name"]."</td><td>".$row["DOB"]."</td><td>".$row["gender"]."</td><td>".$row["phnumber"]."</td><td><form method='GET' action='patientEHR.php?id=".$row["id"]."'><button type='submit' class='btn btn-info d-none d-lg-block m-l-15'>View EHR</button></form></td></tr>";
-
-
+                                    if (mysqli_num_rows($result) > 0) {
+                                    // output data of each row
+                                    while($row = mysqli_fetch_assoc($result)) {
+                                            echo "<option value='".$row['aadhaar']."'>".$row['aadhaar']."</option>";
                                        // echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["gender"]. "<br>";
-                        }
-                        }
+                                    }
+                            }
                         else {
                             echo "0 results";
                         }
 
                         mysqli_close($conn);
-
-                ?>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                    ?>
+                                   
+                                </select>
                             </div>
                         </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
-                <!-- /.row -->
+                <div class="col">
+                </form>
+			        <form class="mt-4" style="text-align:center;" method="POST" action="php/field-upload.php" >
+                        <div class="form-group">
+                            <label>Patient ID</label>
+                            <div>
+                                <select name = "pid" class="form-control">
+                                    <?php
+                                    include("php/db_connect.php");
+                                     $sql = "SELECT * FROM patient";
+                                    $result = mysqli_query($conn, $sql);
+
+                                    if (mysqli_num_rows($result) > 0) {
+                                    // output data of each row
+                                    while($row = mysqli_fetch_assoc($result)) {
+                                            echo "<option value='".$row['aadhaar']."'>".$row['aadhaar']."</option>";
+                                       // echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["gender"]. "<br>";
+                                    }
+                            }
+                        else {
+                            echo "0 results";
+                        }
+
+                        mysqli_close($conn);
+                                    ?>
+                                   
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="symptoms">Symptoms</label>
+                            <input type="text" class="form-control" id="symptoms" name ="symptoms" placeholder="Symptoms"> 
+                        </div>
+                        <div class="form-group">
+                            <label for="presc">Prescription</label>
+                            <input type="text" class="form-control" id="presc" name ="prescription" placeholder="Prescription"> 
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Comment</label>
+                            <input type="text" class="form-control" id="comment" name ="comment" placeholder="Comment"> 
+                        </div>
+                        <div class="form-group">
+                            <label for="precautions">Precautions</label>
+                            <input type="text" class="form-control" id="precautions" name ="precautions" placeholder="Precautions"> 
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                </div>
+                
+                
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -753,6 +788,7 @@
         <!-- ============================================================== -->
         <!-- footer -->
         <!-- ============================================================== -->
+        
         <!-- ============================================================== -->
         <!-- End footer -->
         <!-- ============================================================== -->
@@ -778,14 +814,55 @@
     <script src="../assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
     <!--Custom JavaScript -->
     <script src="dist/js/custom.min.js"></script>
-    <script src="../assets/node_modules/datatables/jquery.dataTables.min-2.html"></script>
+    <!-- ============================================================== -->
+    <!-- Plugins for this page -->
+    <!-- ============================================================== -->
+    <!-- jQuery file upload -->
+    <script src="../assets/node_modules/dropify/dist/js/dropify.min.js"></script>
     <script>
     $(document).ready(function() {
-        $('#myTable').DataTable();
+        // Basic
+        $('.dropify').dropify();
+
+        // Translated
+        $('.dropify-fr').dropify({
+            messages: {
+                default: 'Glissez-déposez un fichier ici ou cliquez',
+                replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                remove: 'Supprimer',
+                error: 'Désolé, le fichier trop volumineux'
+            }
+        });
+
+        // Used events
+        var drEvent = $('#input-file-events').dropify();
+
+        drEvent.on('dropify.beforeClear', function(event, element) {
+            return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+        });
+
+        drEvent.on('dropify.afterClear', function(event, element) {
+            alert('File deleted');
+        });
+
+        drEvent.on('dropify.errors', function(event, element) {
+            console.log('Has Errors');
+        });
+
+        var drDestroy = $('#input-file-to-destroy').dropify();
+        drDestroy = drDestroy.data('dropify')
+        $('#toggleDropify').on('click', function(e) {
+            e.preventDefault();
+            if (drDestroy.isDropified()) {
+                drDestroy.destroy();
+            } else {
+                drDestroy.init();
+            }
+        })
     });
     </script>
 </body>
 
 
-<!-- Mirrored from eliteadmin.themedesigner.in/demos/bt4/hospital/payments.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jan 2020 10:26:09 GMT -->
+<!-- Mirrored from eliteadmin.themedesigner.in/demos/bt4/hospital/form-upload.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jan 2020 10:30:14 GMT -->
 </html>

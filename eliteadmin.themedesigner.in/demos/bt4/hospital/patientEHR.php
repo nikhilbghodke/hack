@@ -678,25 +678,28 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <!-- <?php
-                                            // include("php/db_connect.php");
-                                            // $sql = "SELECT * FROM patient";
-                                            // $result = mysqli_query($conn, $sql);
+                                         <?php
+                                             include("php/db_connect.php");
+                                             $id=$_GET['id'];
+                                             $sql = "SELECT * FROM ehr WHERE patientId='$id'";
+                                             $result = mysqli_query($conn, $sql);
 
-                                            // if (mysqli_num_rows($result) > 0) {
-                                            // // output data of each row
-                                            // while($row = mysqli_fetch_assoc($result)) {
-                                            //     echo "<tr><td>".$row["id"]."</td><td>".$row["aadhaar"]."</td><td>".$row["name"]."</td><td>".$row["DOB"]."</td><td>".$row["gender"]."</td><td>".$row["phnumber"]."</td></tr>";
-                                            //             // echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["gender"]. "<br>";
-                                            // }
-                                            // }
-                                            // else {
-                                            //     echo "0 results";
-                                            // }
+                                             if (mysqli_num_rows($result) > 0) {
+                                            // output data of each row
+                                             while($row = mysqli_fetch_assoc($result)) {
+                                             //print_r($row);
+                                             $imageadd="php/upload/".$row['file'];
+                                                 echo "<tr><td>".$row["id"]."</td><td>".$row["patientId"]."</td><td>".$row["symptoms"]."</td><td>".$row["prescription"]."</td><td>".$row["comments"]."</td><td>".$row["precautions"]."</td><td><a href='$imageadd'> View File</a></tr>";
+                                                 //echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["gender"]. "<br>";
+                                             }
+                                             }
+                                             else {
+                                                 echo "0 results";
+                                             }
 
-                                            // mysqli_close($conn);
+                                            mysqli_close($conn);
 
-                                        ?> -->
+                                        ?> 
                                         </tbody>
                                     </table>
                                 </div>
