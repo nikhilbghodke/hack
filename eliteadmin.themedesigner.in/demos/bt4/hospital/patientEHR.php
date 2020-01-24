@@ -635,37 +635,14 @@
                         <div class="card">
                             <div class="card-body">
                                 <center>
-                                <button type="button" class="btn btn-info d-none d-lg-block m-l-15 btn-lg" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-circle"></i>
-                                Request Files
-                            </button>
-                                </center>
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    
-                                    <h5 class="modal-title" id="exampleModalLabel">Authentication</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
 
+                                <form method="POST" action="php/getOTP.php" >
+                                    <button type="submit" class="btn btn-info d-none d-lg-block m-l-15 btn-lg"><i class="fa fa-plus-circle"></i>
+                                        Request Files
                                     </button>
-                                </div>
-                                <div class="modal-body">
-                                    <center><form>
-                                        <label>Enter OTP</label>
-                                        <div class="col-sm-5">
-                                            <input type="text" class="form-control" id="otp" name="otp"  placeholder="OTP">
-                                        </div>
-                                    </form></center>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Enter OTP</button>
-                                </div>
-                                </div>
-                            </div>
-                            </div>
+                                </form>
+                                </center>
+                            
                                 <hr>
                                 <div class="table-responsive">
                                     <table id="myTable" class="table color-table  danger-table">
