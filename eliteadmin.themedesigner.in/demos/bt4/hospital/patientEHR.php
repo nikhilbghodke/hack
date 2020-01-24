@@ -618,10 +618,27 @@
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
                                 <li class="breadcrumb-item active">Patient EHRs</li>
                             </ol>
-                            <button type="button" class="btn btn-info d-none d-lg-block m-l-15" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-circle"></i>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <!-- /row -->
+                
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <center>
+                                <button type="button" class="btn btn-info d-none d-lg-block m-l-15 btn-lg" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-circle"></i>
                                 Request Files
                             </button>
-            
+                                </center>
                             <!-- Modal -->
                             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -647,22 +664,6 @@
                                 </div>
                             </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- End Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Start Page Content -->
-                <!-- ============================================================== -->
-                <!-- /row -->
-                
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title m-b-0">Patient EHR</h5>
                                 <hr>
                                 <div class="table-responsive">
                                     <table id="myTable" class="table color-table  danger-table">
