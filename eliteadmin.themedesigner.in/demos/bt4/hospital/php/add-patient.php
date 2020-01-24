@@ -2,7 +2,7 @@
 include("db_connect.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-	
+
     $aadhar=$_POST["pid"];
     $name=$_POST["name"];
     $dob=$_POST["bdate"];
@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $number=$_POST["number"];
 
 
-    $sql = "INSERT INTO patient (aadhar, name, DOB, gender, phnumber) VALUES ('$aadhar', '$name', '$dob', '$gender', '$number')";
+    $sql = "INSERT INTO patient (aadhaar, name, DOB, gender, phnumber) VALUES ('$aadhar', '$name', '$dob', '$gender', '$number')";
 
 	if (mysqli_query($conn, $sql)) {
     	echo "New record created successfully";
@@ -18,7 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     	echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 	}
 
+
 	mysqli_close($conn);
+	header("Location: ../patients.html");
+	die();
 
 }
 
