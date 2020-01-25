@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -637,7 +638,9 @@
                             <div class="card-body">
                                 <center>
 
-                                <form method="POST" action="php/getOTP.php" >
+                                <form method="POST" action="form-basic.php">
+                                    <input type="number" name="id" value="<?php echo $_GET['id'];?>" style="display:none;">
+                                    </input>
                                     <button type="submit" class="btn btn-info d-none d-lg-block m-l-15 btn-lg"><i class="fa fa-plus-circle"></i>
                                         Request Files
                                     </button>
